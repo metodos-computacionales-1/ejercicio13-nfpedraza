@@ -1,5 +1,6 @@
 //EL codigo completo lo saque de la siguiente pagina, solo agregue lo d eprecision
 //https://cod-ayu.blogspot.com/2015/10/multiplicacion-de-matrices-en-c.html/
+//https://www.geeksforgeeks.org/hilbert-matrix/
  #include<iostream> 
 using namespace std; /*
 
