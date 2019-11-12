@@ -1,6 +1,10 @@
+
 // my_program.cpp
 #include <iostream>
+#define VAR4;
+
 int main(void)
 {
-    return 0;
+std::cout<<VAR<<std::endl; 
+   return 0;
 }
