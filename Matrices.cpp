@@ -15,6 +15,8 @@ C-->matriz resultante de la multiplicación de dimensión FAxCB
 NOTA:
 dos matrices se pueden multiplicar si las columnas de la primera matriz es igual a las filas de la segunda matriz
 */ 
+
+void cauchy(int n);
 void multiplicacion(double A[20][20],int FA,int CA,double B[20][20],int FB,int CB,double C[20][20] ){
     
     if(CA==FB){//para que se puedan multiplicar dos matrices
@@ -47,6 +49,7 @@ void llenar_matriz(double M[20][20],int f,int c){
     double B[20][20];
     double C[20][20];
     int fa,ca,fb,cb;
+    int n=5;
     std::cout.precision(16);
     std::cout.setf(std::ios::scientific);  
     cout<<"\t"<<"MATRIZ A:"<<endl;
@@ -68,7 +71,29 @@ void llenar_matriz(double M[20][20],int f,int c){
     mostrar_matriz(B,fb,cb);
     cout<<"matriz AXB:"<<endl;
     mostrar_matriz(C,fa,cb);
-    
+    cauchy(n);
     
     return 0;
 } 
+void cauchy(int n) 
+{ 
+    float H[n][n]; 
+  
+    for (int i = 0; i < n; i++) { 
+        for (int j = 0; j < n; j++) { 
+  
+            // using the formula to generate 
+            // hilbert matrix 
+            H[i][j] = (float)1.0 /  
+                     ((i + 1) + (j + 1) - 1.0); 
+        } 
+    } 
+  
+    for (int i = 0; i < n; i++) { 
+        for (int j = 0; j < n; j++)  
+            cout << H[i][j] << " ";         
+        cout << endl; 
+    } 
+} 
+  
+
