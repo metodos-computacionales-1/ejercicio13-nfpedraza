@@ -1,7 +1,7 @@
 
 // my_program.cpp
 #include <iostream>
-#define VAR4;
+const int VAR 4;
 
 int main(void)
 {
